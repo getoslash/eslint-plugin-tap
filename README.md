@@ -3,6 +3,7 @@
 ![npm version](https://img.shields.io/npm/v/eslint-plugin-tap)](https://npmjs.com/package/eslint-plugin-tap)
 [![npm size](https://img.shields.io/bundlephobia/minzip/eslint-plugin-tap)](https://bundlephobia.com/package/eslint-plugin-tap)
 [![install size](https://packagephobia.com/badge?p=eslint-plugin-tap)](https://packagephobia.com/result?p=eslint-plugin-tap)
+[![code coverage](https://codecov.io/gh/getoslash/eslint-plugin-tap/branch/main/graph/badge.svg?token=VBS5M4qYfz)](https://codecov.io/gh/getoslash/eslint-plugin-tap)
 [![Release](https://github.com/getoslash/eslint-plugin-tap/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/getoslash/eslint-plugin-tap/actions/workflows/release.yml)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/eslint-plugin-tap)
 

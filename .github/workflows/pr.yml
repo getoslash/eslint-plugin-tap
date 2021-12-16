@@ -64,3 +64,26 @@ jobs:
       uses: npm ci
     - name: Run tests
       run: npm run test
+
+  coverage:
+    name: code coverage
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
+        cache: 'npm'
+    - name: Install dependencies
+      uses: npm ci
+    - name: Upload code coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: coverage
+          flags: unittests
+          fail_ci_if_error: true
+          verbose: true
