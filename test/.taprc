@@ -1,0 +1,17 @@
+# See https://node-tap.org/docs/cli/
+# Run `npx tap --dump-config` for a listing of what can be set in this file
+files:
+  - ./test/**/*.test.ts
+test-env:
+  - TS_NODE_PROJECT=./test/tsconfig.json
+node-arg:
+  - --require=ts-node/register/transpile-only
+reporter: classic
+
+no-coverage: true
+no-coverage-report: true
+no-check-coverage: true
+statements: 98.05
+branches: 93.52
+functions: 97.82
+lines: 98.59
