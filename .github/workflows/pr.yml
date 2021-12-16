@@ -1,0 +1,66 @@
+name: Check PR
+
+on: [pull_request]
+
+jobs:
+  leaks:
+    name: leaks
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - name: Check code for leaks
+      uses: zricethezav/gitleaks-action@master
+
+  lint:
+    name: lint + typecheck
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    - name: Install dependencies
+      uses: npm ci
+    - name: Check linting
+      run: npm run lint
+    - name: Check types
+      run: npm run typecheck
+
+  language:
+    name: language
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Check language with Alex
+      uses: brown-ccv/alex-recommends@v1.2.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        pr_only: true
+
+  test:
+    name: test/${{ matrix.node }}
+    strategy:
+      matrix:
+        node: [ '12', '14', '16' ]
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
+        cache: 'npm'
+    - name: Install dependencies
+      uses: npm ci
+    - name: Run tests
+      run: npm run test
