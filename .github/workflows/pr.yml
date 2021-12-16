@@ -80,10 +80,10 @@ jobs:
     - name: Install dependencies
       uses: npm ci
     - name: Upload code coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: coverage
-          flags: unittests
-          fail_ci_if_error: true
-          verbose: true
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: coverage
+        flags: unittests
+        fail_ci_if_error: true
+        verbose: true
