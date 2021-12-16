@@ -1,0 +1,81 @@
+{
+  "name": "eslint-plugin-tap",
+  "version": "0.0.0",
+  "description": "ESLint rules for tap",
+  "license": "MIT",
+  "repository": "https://github.com/getoslash/eslint-plugin-tap",
+  "private": false,
+  "author": {
+    "name": "GP",
+    "email": "gp@oslash.com"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives --cache '**/*.ts'",
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "tap --rcfile=./test/.taprc",
+    "test:only": "TAP_ONLY=1 npm run test",
+    "coverage": "npm run test -- --check-coverage --coverage-report=lcovonly --coverage-report=cobertura --coverage-report=text --coverage-report=text-summary",
+    "release": "semantic-release",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "tap",
+    "node-tap",
+    "test",
+    "spec",
+    "runner",
+    "assert",
+    "asserts",
+    "assertion"
+  ],
+  "dependencies": {
+    "espurify": "2.1.1",
+    "multimatch": "5.0.0",
+    "pkg-up": "3.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.2",
+    "@semantic-release/npm": "8.0.3",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "@swc/core": "1.2.120",
+    "@types/eslint": "8.2.1",
+    "@types/estree": "0.0.50",
+    "@types/node": "16.11.13",
+    "@types/tap": "15.0.5",
+    "@typescript-eslint/eslint-plugin": "5.7.0",
+    "@typescript-eslint/parser": "5.7.0",
+    "eslint": "8.4.1",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-prettier": "4.0.0",
+    "prettier": "2.5.1",
+    "tap": "15.1.5",
+    "ts-node": "10.4.0",
+    "tsup": "5.11.6",
+    "typescript": "4.5.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  }
+}
