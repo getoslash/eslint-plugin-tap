@@ -60,7 +60,7 @@ jobs:
         git_commit_gpgsign: true
         git_tag_gpgsign: true
     - name: Kick off release
-      run: npm_config_yes=true npx semantic-release
+      run: npm_config_yes=true npx semantic-release --debug
       env:
         NPM_USERNAME: oslashbot
         NPM_EMAIL: ${{ steps.import-gpg.outputs.email }}
