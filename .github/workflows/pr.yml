@@ -44,6 +44,8 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.OSLASH_BOT_GITHUB_TOKEN }}
         pr_only: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.OSLASH_BOT_GITHUB_TOKEN }}
 
   test:
     name: test/${{ matrix.node }}
