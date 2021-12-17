@@ -63,6 +63,8 @@ jobs:
     - name: Kick off release
       run: npm_config_yes=true npx semantic-release
       env:
+        NPM_USERNAME: oslashbot
+        NPM_EMAIL: ${{ steps.import-gpg.outputs.email }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIT_AUTHOR_NAME: ${{ steps.import-gpg.outputs.name }}
