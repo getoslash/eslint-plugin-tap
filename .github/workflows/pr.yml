@@ -79,6 +79,8 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
+    - name: Run tests and collect coverage
+      run: npm run coverage
     - name: Upload code coverage
       uses: codecov/codecov-action@v1
       with:
