@@ -19,3 +19,5 @@ updates:
         versions: ["6.x"] # v6.x has become ESM-only.
       - dependency-name: "pkg-up"
         versions: ["4.x"] # v4.x has become ESM-only.
+      - dependency-name: "@types/node"
+        versions: ["17.x"] # Targeting only v16.x, as that is the LTS release.
