@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies -- This file is only used during build-time, so this is fine. */
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
@@ -5,7 +6,5 @@ export default defineConfig({
   sourcemap: false,
   minify: true,
   clean: true,
-  entryPoints: [
-      'src/index.ts'
-    ],
+  entryPoints: ['src/index.ts'],
 })
