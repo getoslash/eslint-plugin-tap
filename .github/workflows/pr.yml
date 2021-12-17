@@ -42,7 +42,7 @@ jobs:
     - name: Check language with Alex
       uses: brown-ccv/alex-recommends@v1.2.1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.OSLASH_BOT_GITHUB_TOKEN }}
         pr_only: true
 
   test:
