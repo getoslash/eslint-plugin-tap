@@ -23,26 +23,26 @@ Configure it in your `package.json` or `eslintrc.*` file as described in the [ES
 
 ```json
 {
-	"plugins": [
-		"tap"
-	],
-	"rules": {
-		"tap/assertion-message": ["error", "always"],
-		"tap/max-asserts": ["error", 8],
-		"tap/no-identical-title": "error",
-		"tap/no-ignored-test-files": "error",
-		"tap/no-only-test": "error",
-		"tap/no-skip-test": "error",
-		"tap/no-statement-after-end": "error",
-		"tap/no-unknown-modifiers": "error",
-		"tap/test-ended": "error",
-		"tap/test-title": ["error", "if-multiple"],
-		"tap/use-plan": ["error", "always"],
-		"tap/use-plan-well": "error",
-		"tap/use-t-well": "error",
-		"tap/use-t": "error",
-		"tap/use-tap": "error",
-	}
+  "plugins": [
+    "tap"
+  ],
+  "rules": {
+    "tap/assertion-message": ["error", "always"],
+    "tap/max-asserts": ["error", 8],
+    "tap/no-identical-title": "error",
+    "tap/no-ignored-test-files": "error",
+    "tap/no-only-test": "error",
+    "tap/no-skip-test": "error",
+    "tap/no-statement-after-end": "error",
+    "tap/no-unknown-modifiers": "error",
+    "tap/test-ended": "error",
+    "tap/test-title": ["error", "if-multiple"],
+    "tap/use-plan": ["error", "always"],
+    "tap/use-plan-well": "error",
+    "tap/use-t-well": "error",
+    "tap/use-t": "error",
+    "tap/use-tap": "error",
+  }
 }
 ```
 
@@ -74,10 +74,10 @@ Enable it in your `package.json` or `eslintrc.*` file with the `extends` option 
 
 ```json
 {
-	"plugins": [
-		"tap"
-	],
-	"extends": "plugin:tap/recommended"
+  "plugins": [
+    "tap"
+  ],
+  "extends": "plugin:tap/recommended"
 }
 ```
 
