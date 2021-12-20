@@ -30,8 +30,16 @@ jobs:
       run: npm run lint
     - name: Check types
       run: npm run typecheck
-    - name: Run tests
-      run: npm run test
+    - name: Run tests and collect coverage
+      run: npm run coverage
+    - name: Upload code coverage
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: coverage
+        flags: unittests
+        fail_ci_if_error: true
+        verbose: true
 
   release:
     name: release
