@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/getoslash/eslint-plugin-tap/compare/v1.0.0...v1.1.0) (2021-12-23)
+
+
+### Features
+
+* bump version to try to republish on npm ([51ac5fb](https://github.com/getoslash/eslint-plugin-tap/commit/51ac5fb19cd6ddb004c9c15b535ca57d4f62d2d7))
+
 # 1.0.0 (2021-12-20)
 
 
