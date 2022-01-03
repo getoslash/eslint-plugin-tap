@@ -58,7 +58,7 @@
     "@types/estree": "0.0.50",
     "@types/node": "16.11.13",
     "@types/tap": "15.0.5",
-    "@typescript-eslint/eslint-plugin": "5.8.0",
+    "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.0",
     "eslint": "8.6.0",
     "eslint-config-airbnb-base": "15.0.0",
