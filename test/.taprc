@@ -11,7 +11,7 @@ reporter: classic
 no-coverage: true
 no-coverage-report: true
 no-check-coverage: true
-statements: 98.05
+statements: 97.87
 branches: 93.52
 functions: 97.82
-lines: 98.59
+lines: 98.47
