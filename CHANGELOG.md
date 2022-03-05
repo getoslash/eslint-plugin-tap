@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/getoslash/eslint-plugin-tap/compare/v1.1.0...v1.2.0) (2022-03-05)
+
+
+### Features
+
+* **tap:** support new assert methods introduced in tap 15.2.x ([#35](https://github.com/getoslash/eslint-plugin-tap/issues/35)) ([bc6a0ce](https://github.com/getoslash/eslint-plugin-tap/commit/bc6a0cee15b6f73db059b5ae9ba00b1b00eab347))
+
 # [1.1.0](https://github.com/getoslash/eslint-plugin-tap/compare/v1.0.0...v1.1.0) (2021-12-23)
 
 
