@@ -27,6 +27,10 @@ export const tapAssertMethods = {
   hasStrict: { arguments: 3 },
   match: { arguments: 3 },
   has: { arguments: 3 },
+  hasProp: { arguments: 3 },
+  hasProps: { arguments: 3 },
+  hasOwnProp: { arguments: 3 },
+  hasOwnProps: { arguments: 3 },
   notMatch: { arguments: 3 },
   type: { arguments: 3 },
 } as const
