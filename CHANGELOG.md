@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/getoslash/eslint-plugin-tap/compare/v1.2.0...v1.2.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* **core:** make default exports work ([#36](https://github.com/getoslash/eslint-plugin-tap/issues/36)) ([17ef447](https://github.com/getoslash/eslint-plugin-tap/commit/17ef447d79026f983bae8d2ed5bf305f889f23d7))
+
 # [1.2.0](https://github.com/getoslash/eslint-plugin-tap/compare/v1.1.0...v1.2.0) (2022-03-05)
 
 

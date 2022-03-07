@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-tap",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ESLint rules for tap",
   "license": "MIT",
   "repository": "https://github.com/getoslash/eslint-plugin-tap",
