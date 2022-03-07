@@ -11,7 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "importsNotUsedAsValues": "error",
     "typeRoots": [
       "node_modules/@types",
