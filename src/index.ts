@@ -68,6 +68,4 @@ const eslintTapPluginConfig = {
   },
 }
 
-module.exports = eslintTapPluginConfig
-
 export default eslintTapPluginConfig
