@@ -69,5 +69,7 @@ const eslintTapPluginConfig = {
 }
 
 module.exports = eslintTapPluginConfig
-
-export default eslintTapPluginConfig
+// Why do this instead of `export default ...`?
+// This is just how esbuild/tsup handle exports from CJS and to maintain CJS/ESM interop.
+// @see https://github.com/egoist/tsup/issues/283
+module.exports.default = eslintTapPluginConfig
