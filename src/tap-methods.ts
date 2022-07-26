@@ -129,4 +129,11 @@ export const tapTestHelperMethods = [
   'bailout',
 ] as const
 
-export const tapTopLevelMethods = ['test', 'skip', 'only'] as const
+export const tapTopLevelMethods = [
+  'test',
+  'skip',
+  'only',
+  'Test',
+  'prototype',
+  'addAssert',
+] as const
