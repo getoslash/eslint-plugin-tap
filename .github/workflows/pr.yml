@@ -13,7 +13,7 @@ jobs:
       with:
         fetch-depth: '0'
     - name: Check code for leaks
-      uses: zricethezav/gitleaks-action@master
+      uses: zricethezav/gitleaks-action@v1.6.0
 
   lint:
     name: lint + typecheck
