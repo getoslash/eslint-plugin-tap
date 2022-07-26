@@ -17,6 +17,12 @@ ruleTester.run('no-unknown-modifiers', rule, {
     `${header} tap.test("my test name", t => {});`,
     `${header} tap.only("my only test name", t => {});`,
     `${header} tap.skip("my skipped test name", t => {});`,
+    `${header} tap.Test.prototype.addAssert('titleCase', 1, function (str, message, extra) {
+        message = message || 'should be in Title Case'
+        const tc = str.toLowerCase().replace(/\b./, match => match.toUpperCase())
+        return this.equal(str, tc, message, extra)
+    });
+    tap.titleCase('This Passes');`,
     // shouldn't be triggered since it's not a test file
     `test.boop(t => {});`,
   ],
