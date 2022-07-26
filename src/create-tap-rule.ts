@@ -101,7 +101,7 @@ export const createTapRule = () => {
     ImportDeclaration: (node: ImportDeclaration): void => {
       if (
         !isTestFile &&
-        isDeepStrictEqual(espurify(node), tapImportDeclarationAst)
+        isDeepStrictEqual(espurify.purifyAst(node), tapImportDeclarationAst)
       ) {
         isTestFile = true
       }
@@ -109,7 +109,7 @@ export const createTapRule = () => {
     VariableDeclarator: (node: VariableDeclarator): void => {
       if (
         !isTestFile &&
-        isDeepStrictEqual(espurify(node), tapVariableDeclaratorAst)
+        isDeepStrictEqual(espurify.purifyAst(node), tapVariableDeclaratorAst)
       ) {
         isTestFile = true
       }
