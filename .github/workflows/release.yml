@@ -14,13 +14,13 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'skip release') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: '0'
     - name: Check code for leaks
-      uses: zricethezav/gitleaks-action@master
+      uses: zricethezav/gitleaks-action@v1.6.0
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: 'lts/*'
         cache: 'npm'
@@ -48,11 +48,11 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'skip release') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         persist-credentials: false
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: 'lts/*'
         cache: 'npm'

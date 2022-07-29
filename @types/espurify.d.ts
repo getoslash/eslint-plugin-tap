@@ -9,6 +9,18 @@ declare module 'espurify' {
    * @returns Purified ESTree AST Node.
    */
   function espurify(node: import('estree').Node): import('estree').Node
+
+  /**
+   * Clone ESTree AST Node without extra properties.
+   *
+   * Leaves out properties defined in The [ESTree Spec](https://github.com/estree/estree)
+   * (formerly known as [Mozilla SpiderMonkey Parser API](https://speakerdeck.com/michaelficarra/spidermonkey-parser-api-a-standard-for-structured-js-representations)) only.
+   * Also note that extra information (such as loc, range and raw) is eliminated too.
+   * @param node ESTree AST Node.
+   * @returns Purified ESTree AST Node.
+   */
+  espurify.purifyAst = espurify
+
   /**
    * Returns customized function for cloning ESTree AST, configured by custom `options`.
    *
@@ -31,9 +43,15 @@ declare module 'espurify' {
    * @param whitelist Configuration of properties allowed for each `NodeType`.
    * @returns Instance of `espurify`
    */
-  espurify.cloneWithWhitelist = (
+  espurify.cloneWithAllowlist = (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     whitelist: Record<import('estree').Expression['type'], Array<string>>
   ) => espurify
+
+  /**
+   * @deprecated since version 3.0.0. Use `espurify.cloneWithAllowlist` instead.
+   */
+  espurify.cloneWithWhitelist = espurify.cloneWithAllowlist
+
   export default espurify
 }
